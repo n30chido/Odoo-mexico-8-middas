@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cheq_Banorte" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="xPath">
+		<![CDATA[]]>
+	</queryString>
+	<field name="Ciudad-city" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Compania-company_id/Ciudad-city]]></fieldDescription>
+	</field>
+	<field name="Cantidad_en_letra-amount_in_word" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Cantidad_en_letra-amount_in_word]]></fieldDescription>
+	</field>
+	<field name="Fecha-date" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Fecha-date]]></fieldDescription>
+	</field>
+	<field name="Pais-country_id" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Compania-company_id/Pais-country_id]]></fieldDescription>
+	</field>
+	<field name="Nombre-name" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Empresa-partner_id/Nombre-name]]></fieldDescription>
+	</field>
+	<field name="Fecha-date2" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Empresa-partner_id/Fecha-date]]></fieldDescription>
+	</field>
+	<field name="Total_a_pagar-debit" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Empresa-partner_id/Total_a_pagar-debit]]></fieldDescription>
+	</field>
+	<field name="Importe_impuesto-tax_amount" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Importe_impuesto-tax_amount]]></fieldDescription>
+	</field>
+	<field name="Pago-pay_now" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Pago-pay_now]]></fieldDescription>
+	</field>
+	<field name="Ciudad-city2" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Compania-company_id/Compania_matriz-parent_id/Ciudad-city]]></fieldDescription>
+	</field>
+	<field name="Pagos_previos-pre_line" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Pagos_previos-pre_line]]></fieldDescription>
+	</field>
+	<field name="Importe_pagado_en_la_moneda_de_la_compania-paid_amount_in_company_currency" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Importe_pagado_en_la_moneda_de_la_compania-paid_amount_in_company_currency]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="424" y="38" width="147" height="19"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Fecha-date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="33" width="144" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Ciudad-city2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="86" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="26" width="344" height="18"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Cantidad_en_letra-amount_in_word}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="13" y="-3" width="344" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Nombre-name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="-1" width="80" height="15"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Importe_pagado_en_la_moneda_de_la_compania-paid_amount_in_company_currency}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="109" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
